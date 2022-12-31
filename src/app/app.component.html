@@ -1,0 +1,32 @@
+<body>
+  <div class="test_something">
+    <div class="test_something--header">
+      <div
+        class="test_something--linkElement"
+        *ngFor="let tabs of tabItems; let i = index"
+      >
+        <a class="test_something--link" (click)="onChangeContent(i)">{{
+          tabs
+        }}</a>
+      </div>
+    </div>
+    <div class="test_something--title">
+      <button class="test_something--article">文章</button>
+      <a href="" class="test_something--articleLink">影音</a>
+    </div>
+    <div class="test_something--content" [ngSwitch]="state">
+      <div class="test_something--contentElement" *ngSwitchCase="0">
+        Content 1
+      </div>
+      <div class="test_something--contentElement" *ngSwitchCase="1">
+        Content 2
+      </div>
+      <div class="test_something--contentElement" *ngSwitchCase="2">
+        Content 3
+      </div>
+      <div class="test_something--contentElement" *ngSwitchCase="3">
+        Content 4
+      </div>
+    </div>
+  </div>
+</body>
